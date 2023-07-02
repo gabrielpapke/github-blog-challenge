@@ -1,11 +1,11 @@
 import { HeaderContainer } from './styles'
 
-// import logoIgnite from '../../assets/logo-ignite.svg'
+import logo from '../../assets/logo.svg'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <span>Logo</span>
+      <img src={logo} alt="" />
     </HeaderContainer>
   )
 }

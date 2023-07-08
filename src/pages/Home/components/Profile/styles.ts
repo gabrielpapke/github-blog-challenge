@@ -14,10 +14,15 @@ export const ProfileContainer = styled.div`
 
 export const Image = styled.img`
   max-width: 9.25rem;
+  max-height: 9.25rem;
   border-radius: 8px;
 `
 
 export const BioContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   a.external {
     position: absolute;
     right: 2rem;

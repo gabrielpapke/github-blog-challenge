@@ -38,11 +38,7 @@ export function Profile() {
 
         <h2>{userInfo.name}</h2>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente
-          iste fugit facilis, non excepturi porro? Sapiente consequuntur nemo
-          ipsum!
-        </p>
+        <p>{userInfo.bio}</p>
 
         <InfoTags>
           <Tag>

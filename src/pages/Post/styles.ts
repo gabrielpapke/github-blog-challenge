@@ -1,6 +1,9 @@
 import styled from 'styled-components'
+import ReactMarkdown from 'react-markdown'
 
-export const PostContainer = styled.main``
+export const PostContainer = styled.main`
+  padding-bottom: 4rem;
+`
 
 export const PostHeader = styled.header`
   background-color: ${(props) => props.theme['base-profile']};
@@ -38,4 +41,16 @@ export const Title = styled.h1`
   padding-top: 1.25rem;
 `
 
-export const PostBody = styled.div``
+export const PostBody = styled(ReactMarkdown)`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin-bottom: 1rem;
+  }
+  ul {
+    padding-left: 1rem;
+  }
+`

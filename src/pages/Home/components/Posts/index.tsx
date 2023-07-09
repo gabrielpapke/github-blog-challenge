@@ -2,14 +2,15 @@ import { FormEvent, useCallback, useEffect, useState } from 'react'
 import { AxiosResponse } from 'axios'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import { NavLink } from 'react-router-dom'
 
 import { api } from '../../../../lib/axios'
 
 import { PostsContainer, Title, SearchForm, Input, Item, Grid } from './styles'
-import { NavLink } from 'react-router-dom'
 
 interface PostType {
   id: number
+  number: number
   title: string
   body: string
   created_at: string
@@ -71,7 +72,7 @@ export function Posts() {
           <Item key={item.id}>
             <header>
               <h3>
-                <NavLink to={`post/${item.id}`}>{item.title}</NavLink>
+                <NavLink to={`post/${item.number}`}>{item.title}</NavLink>
               </h3>
 
               <span>

@@ -4,7 +4,8 @@ import { AxiosResponse } from 'axios'
 
 import { api } from '../../../../lib/axios'
 
-import { BioContainer, Image, ProfileContainer, InfoTags, Tag } from './styles'
+import { BioContainer, Image, ProfileContainer } from './styles'
+import { InfoTags, Tag } from '../../../../styles/components'
 
 interface UserInfoType {
   avatar_url: string

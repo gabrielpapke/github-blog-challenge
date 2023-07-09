@@ -6,7 +6,7 @@ export const defaultTheme = {
   'base-subtitle': '#C4D4E3',
   'base-text': '#AFC2D4',
   'base-span': '#7B96B2',
-  'base-label': '#7C7C8A',
+  'base-label': '#3A536B',
   'base-border': '#1C2F41',
   'base-post': '#112131',
   'base-profile': '#0B1B2B',

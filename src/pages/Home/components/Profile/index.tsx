@@ -1,16 +1,37 @@
 import { useEffect, useState } from 'react'
 import { ArrowSquareOut, Buildings, GithubLogo } from '@phosphor-icons/react'
+import { AxiosResponse } from 'axios'
 
 import { api } from '../../../../lib/axios'
 
 import { BioContainer, Image, ProfileContainer, InfoTags, Tag } from './styles'
 
+interface UserInfoType {
+  avatar_url: string
+  html_url: string
+  name: string
+  bio: string
+  login: string
+  company: string
+  followers: number
+}
+
 export function Profile() {
-  const [userInfo, setUserInfo] = useState({})
+  const [userInfo, setUserInfo] = useState<UserInfoType>({
+    avatar_url: '',
+    html_url: '',
+    name: '',
+    bio: '',
+    login: '',
+    company: '',
+    followers: 0,
+  })
 
   useEffect(() => {
     async function loadUserInfo() {
-      const response = await api.get('users/gabrielpapke')
+      const response: AxiosResponse<UserInfoType> = await api.get(
+        'users/gabrielpapke',
+      )
 
       setUserInfo(response.data)
     }
@@ -18,11 +39,9 @@ export function Profile() {
     loadUserInfo()
   }, [])
 
-  console.log(userInfo)
-
   return (
     <ProfileContainer>
-      <Image src={userInfo.avatar_url} />
+      <Image src={userInfo.avatar_url} alt="" />
 
       <BioContainer>
         <a
